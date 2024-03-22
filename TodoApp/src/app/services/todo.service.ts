@@ -49,7 +49,7 @@ export class TodoService {
   isCompleted(id: number) {
     return this.http
       .put<Response>(
-        `${this.baseUrl}/api/todos/${id}`,
+        `${this.baseUrl}/api/todos/isCompleted/${id}`,
         {},
         {
           observe: 'response',
