@@ -1,1 +1,19 @@
-<p>todo-update works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2>Upodate To-Do Content</h2>
+      <form [formGroup]="todoForm" (ngSubmit)="update()">
+        <div class="mb-3">
+          <label for="">Content</label>
+          <textarea
+            class="form-control"
+            formControlName="content"
+            title="content"
+          >
+          </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,8 @@
     <div class="col-md-8 mx-auto">
       <h2>To do</h2>
       <a routerLink="/todo-add">Add to-do content</a>
-      <table class="table">
+      
+      <table class="table ">
         <thead>
           <tr>
             <th>Completed?</th>
@@ -31,14 +32,16 @@
             </td>
             <td>{{ todo.created | date : "short" }}</td>
             <td>
-              <button (click)="delete(todo.id)" class="btn btn-danger">
+              <button (click)="delete(todo.id)" class="btn btn-danger btn-sm">
                 Delete
               </button>
-              <a
-                class="btn btn-success mx-2"
+
+              <button
+                class="btn btn-success btn-sm mx-2"
                 [routerLink]="['/todo-update', todo.id]"
-                >Update</a
               >
+                Update
+              </button>
             </td>
           </tr>
           }
