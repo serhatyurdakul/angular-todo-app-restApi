@@ -1,1 +1,19 @@
-<p>todo-add works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2>Add To-Do Content</h2>
+      <form [formGroup]="todoForm" (ngSubmit)="add()">
+        <div class="mb-3">
+          <label for="">Content</label>
+          <textarea
+            class="form-control"
+            formControlName="content"
+            title="content"
+          >
+          </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
